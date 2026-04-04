@@ -56,4 +56,5 @@ logs/
 htmlcov/
 
 # MLflow
-mlruns/
+mlruns/data/matches.csv
+data/deliveries.csv
