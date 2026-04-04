@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  # ─── Streamlit Frontend ───────────────────────────────────────────────────
+  streamlit:
+    build: .
+    container_name: ipl_streamlit
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - API_BASE_URL=http://api:8000
+    command: streamlit run app.py --server.port=8501 --server.address=0.0.0.0
+    depends_on:
+      - api
+    restart: unless-stopped
+
+  # ─── FastAPI Backend ──────────────────────────────────────────────────────
+  api:
+    build: .
+    container_name: ipl_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    command: uvicorn api:app --host 0.0.0.0 --port 8000 --workers 2
+    restart: unless-stopped
+
+volumes:
+  data:

@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Environment variables (keep .env.example)
+.env
+
+# ✅ Raw CSVs are tracked via Git LFS — do NOT ignore them
+# data/matches.csv      <- tracked by LFS
+# data/deliveries.csv   <- tracked by LFS
+
+# Generated files only (safe to ignore — rebuilt by train.py)
+data/processed/
+data/models/
+data/ipl_analytics.db
+
+# Keep README
+!data/README.md
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MLflow
+mlruns/
