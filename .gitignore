@@ -56,3 +56,5 @@ logs/
 htmlcov/
 
 # MLflow
+data/raw/
+data/*.csv
