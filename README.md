@@ -3,7 +3,7 @@
 > AI-Powered IPL Match Prediction & Analytics Platform  
 > Built with **Python · Streamlit · FastAPI · SQLite · XGBoost · LightGBM**
 
-### 🚀 Live Demo
+###  Live Demo
 **[https://iplanalytics-tizbfs5v2tjgu8wr4vkye7.streamlit.app/](https://iplanalytics-tizbfs5v2tjgu8wr4vkye7.streamlit.app/)**
 
 ---
